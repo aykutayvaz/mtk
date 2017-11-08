@@ -21,7 +21,11 @@ class LoginController extends Controller
       return  $view;
       //return $name='aykut';
     }
-
+    public function register()
+    {
+        $view = view('login.register');
+        return  $view;
+    }
     /*@var string
 
     protected $redirectTo = '/home';

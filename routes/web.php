@@ -22,3 +22,4 @@ Route::get('/a', function () {
 
 //Route::get('/login', ['uses' =>'Users\LoginController@action_index']);///login/{squirrel}
 Route::get('/login', 'Users\LoginController@action_index');///login/{squirrel}
+Route::get('/register', 'Users\LoginController@register');///login/{squirrel}
