@@ -21,5 +21,8 @@ Route::get('/a', function () {
 });
 
 //Route::get('/login', ['uses' =>'Users\LoginController@action_index']);///login/{squirrel}
-Route::get('/login', 'Users\LoginController@action_index');///login/{squirrel}
-Route::get('/register', 'Users\LoginController@register');///login/{squirrel}
+Route::group(['middleware'=>['web']],function(){
+  Route::get('/login', 'Users\LoginController@action_index');///login/{squirrel}
+  Route::get('/register', 'Users\LoginController@register');///login/{squirrel}
+  Route::post('/login', 'Users\LoginController@validate_login');
+});

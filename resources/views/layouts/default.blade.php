@@ -19,7 +19,13 @@
 </head>
 
 <body class="bg-dark">
-  <!--Bu master-->
-  @yield('content')
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 text-center mx-auto mt-5 "><!--col-sm-4 üste geliyor-->
+            <img src="{{ asset('/resources/assets/media/logo_2x.png')}}" data-src="/resources/assets/media/logo.png" data-src-retina="/resources/assets/media/logo_2x.png" width="147" height="33" alt="Logo">
+        </div>
+      </div>
+      @yield('content')
+   </div>
 </body>
 </html>

@@ -21,6 +21,12 @@ class LoginController extends Controller
       return  $view;
       //return $name='aykut';
     }
+    public function validate_login()
+    {
+      $view = view('login.index');
+      $view ->message ="Login oldu";
+      return  $view;
+    }
     public function register()
     {
         $view = view('login.register');
